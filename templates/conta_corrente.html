@@ -1,0 +1,23 @@
+{% extends "principal.html"%}
+{% block conteudo %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Titular</th>
+                <th>Saldo</th>
+                <th>Limite</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for corrente in corrente %}
+                        <tr>
+                            <td>{{ corrente.numero }}</td>
+                            <td>{{ corrente.titular }}</td>
+                            <td>{{ corrente.saldo }}</td>
+                            <td>{{ corrente.limite }}</td>
+                        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

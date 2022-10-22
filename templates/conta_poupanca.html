@@ -1,0 +1,21 @@
+{% extends "principal.html"%}
+{% block conteudo %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Titular</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for poupanca in poupanca %}
+                        <tr>
+                            <td>{{ poupanca.numero }}</td>
+                            <td>{{ poupanca.titular }}</td>
+                            <td>{{ poupanca.saldo }}</td>
+                        </tr>    
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
